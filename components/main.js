@@ -1,4 +1,7 @@
 import { applyBackgroundColors } from './normal/bg.js';
 
 // Call the function to apply background colors
-applyBackgroundColors();
+export function allFunc(){
+    applyBackgroundColors();
+}
+
