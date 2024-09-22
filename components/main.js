@@ -4,4 +4,4 @@ import { applyBackgroundColors } from './normal/bg.js';
 export function allFunc(){
     applyBackgroundColors();
 }
-
+allFunc()
