@@ -1,3 +1,170 @@
-.tc-red1{
-    color: red;
-}
+:root {
+    /* Reds */
+    --txt-col-red: #ff0000;
+    --txt-col-light-red: #ff6666;
+    --txt-col-dark-red: #8b0000;
+    --txt-col-crimson: #dc143c;
+    --txt-col-firebrick: #b22222;
+    --txt-col-indianred: #cd5c5c;
+  
+    /* Blues */
+    --txt-col-blue: #0000ff;
+    --txt-col-light-blue: #add8e6;
+    --txt-col-dark-blue: #00008b;
+    --txt-col-royalblue: #4169e1;
+    --txt-col-skyblue: #87ceeb;
+    --txt-col-dodgerblue: #1e90ff;
+  
+    /* Greens */
+    --txt-col-green: #00ff00;
+    --txt-col-light-green: #90ee90;
+    --txt-col-dark-green: #006400;
+    --txt-col-forestgreen: #228b22;
+    --txt-col-limegreen: #32cd32;
+    --txt-col-palegreen: #98fb98;
+  
+    /* Yellows */
+    --txt-col-yellow: #ffff00;
+    --txt-col-light-yellow: #ffffe0;
+    --txt-col-dark-yellow: #ffcc00;
+    --txt-col-gold: #ffd700;
+    --txt-col-khaki: #f0e68c;
+    --txt-col-lemonchiffon: #fffacd;
+  
+    /* Oranges */
+    --txt-col-orange: #ff7f00;
+    --txt-col-light-orange: #ffcc99;
+    --txt-col-dark-orange: #ff8c00;
+    --txt-col-coral: #ff7f50;
+    --txt-col-tomato: #ff6347;
+    --txt-col-salmon: #fa8072;
+  
+    /* Purples */
+    --txt-col-purple: #800080;
+    --txt-col-light-purple: #dda0dd;
+    --txt-col-dark-purple: #4b0082;
+    --txt-col-violet: #ee82ee;
+    --txt-col-orchid: #da70d6;
+    --txt-col-thistle: #d8bfd8;
+  
+    /* Pinks */
+    --txt-col-pink: #ff1493;
+    --txt-col-light-pink: #ffb6c1;
+    --txt-col-dark-pink: #c71585;
+    --txt-col-hotpink: #ff69b4;
+    --txt-col-lightcoral: #f08080;
+    --txt-col-deeppink: #ff1493;
+  
+    /* Teals */
+    --txt-col-teal: #008080;
+    --txt-col-light-teal: #afeeee;
+    --txt-col-dark-teal: #004c4c;
+    --txt-col-aquamarine: #7fffd4;
+    --txt-col-mediumturquoise: #48d1cc;
+    --txt-col-turquoise: #40e0d0;
+  
+    /* Grays */
+    --txt-col-gray: #808080;
+    --txt-col-light-gray: #d3d3d3;
+    --txt-col-dark-gray: #333333;
+    --txt-col-dimgray: #696969;
+    --txt-col-silver: #c0c0c0;
+    --txt-col-gainsboro: #dcdcdc;
+  
+    /* Other Colors */
+    --txt-col-black: #000000;
+    --txt-col-white: #ffffff;
+    --txt-col-brown: #a52a2a;
+    --txt-col-navy: #000080;
+    --txt-col-maroon: #800000;
+    --txt-col-olive: #808000;
+    --txt-col-cyan: #00ffff;
+    --txt-col-lime: #32cd32;
+    --txt-col-sienna: #a0522d;
+  }
+  
+  /* Utility Classes for Text Colors */
+  
+  /* Reds */
+  .txt-col-red { color: var(--txt-col-red); }
+  .txt-col-light-red { color: var(--txt-col-light-red); }
+  .txt-col-dark-red { color: var(--txt-col-dark-red); }
+  .txt-col-crimson { color: var(--txt-col-crimson); }
+  .txt-col-firebrick { color: var(--txt-col-firebrick); }
+  .txt-col-indianred { color: var(--txt-col-indianred); }
+  
+  /* Blues */
+  .txt-col-blue { color: var(--txt-col-blue); }
+  .txt-col-light-blue { color: var(--txt-col-light-blue); }
+  .txt-col-dark-blue { color: var(--txt-col-dark-blue); }
+  .txt-col-royalblue { color: var(--txt-col-royalblue); }
+  .txt-col-skyblue { color: var(--txt-col-skyblue); }
+  .txt-col-dodgerblue { color: var(--txt-col-dodgerblue); }
+  
+  /* Greens */
+  .txt-col-green { color: var(--txt-col-green); }
+  .txt-col-light-green { color: var(--txt-col-light-green); }
+  .txt-col-dark-green { color: var(--txt-col-dark-green); }
+  .txt-col-forestgreen { color: var(--txt-col-forestgreen); }
+  .txt-col-limegreen { color: var(--txt-col-limegreen); }
+  .txt-col-palegreen { color: var(--txt-col-palegreen); }
+  
+  /* Yellows */
+  .txt-col-yellow { color: var(--txt-col-yellow); }
+  .txt-col-light-yellow { color: var(--txt-col-light-yellow); }
+  .txt-col-dark-yellow { color: var(--txt-col-dark-yellow); }
+  .txt-col-gold { color: var(--txt-col-gold); }
+  .txt-col-khaki { color: var(--txt-col-khaki); }
+  .txt-col-lemonchiffon { color: var(--txt-col-lemonchiffon); }
+  
+  /* Oranges */
+  .txt-col-orange { color: var(--txt-col-orange); }
+  .txt-col-light-orange { color: var(--txt-col-light-orange); }
+  .txt-col-dark-orange { color: var(--txt-col-dark-orange); }
+  .txt-col-coral { color: var(--txt-col-coral); }
+  .txt-col-tomato { color: var(--txt-col-tomato); }
+  .txt-col-salmon { color: var(--txt-col-salmon); }
+  
+  /* Purples */
+  .txt-col-purple { color: var(--txt-col-purple); }
+  .txt-col-light-purple { color: var(--txt-col-light-purple); }
+  .txt-col-dark-purple { color: var(--txt-col-dark-purple); }
+  .txt-col-violet { color: var(--txt-col-violet); }
+  .txt-col-orchid { color: var(--txt-col-orchid); }
+  .txt-col-thistle { color: var(--txt-col-thistle); }
+  
+  /* Pinks */
+  .txt-col-pink { color: var(--txt-col-pink); }
+  .txt-col-light-pink { color: var(--txt-col-light-pink); }
+  .txt-col-dark-pink { color: var(--txt-col-dark-pink); }
+  .txt-col-hotpink { color: var(--txt-col-hotpink); }
+  .txt-col-lightcoral { color: var(--txt-col-lightcoral); }
+  .txt-col-deeppink { color: var(--txt-col-deeppink); }
+  
+  /* Teals */
+  .txt-col-teal { color: var(--txt-col-teal); }
+  .txt-col-light-teal { color: var(--txt-col-light-teal); }
+  .txt-col-dark-teal { color: var(--txt-col-dark-teal); }
+  .txt-col-aquamarine { color: var(--txt-col-aquamarine); }
+  .txt-col-mediumturquoise { color: var(--txt-col-mediumturquoise); }
+  .txt-col-turquoise { color: var(--txt-col-turquoise); }
+  
+  /* Grays */
+  .txt-col-gray { color: var(--txt-col-gray); }
+  .txt-col-light-gray { color: var(--txt-col-light-gray); }
+  .txt-col-dark-gray { color: var(--txt-col-dark-gray); }
+  .txt-col-dimgray { color: var(--txt-col-dimgray); }
+  .txt-col-silver { color: var(--txt-col-silver); }
+  .txt-col-gainsboro { color: var(--txt-col-gainsboro); }
+  
+  /* Other Colors */
+  .txt-col-black { color: var(--txt-col-black); }
+  .txt-col-white { color: var(--txt-col-white); }
+  .txt-col-brown { color: var(--txt-col-brown); }
+  .txt-col-navy { color: var(--txt-col-navy); }
+  .txt-col-maroon { color: var(--txt-col-maroon); }
+  .txt-col-olive { color: var(--txt-col-olive); }
+  .txt-col-cyan { color: var(--txt-col-cyan); }
+  .txt-col-lime { color: var(--txt-col-lime); }
+  .txt-col-sienna { color: var(--txt-col-sienna); }
+  
