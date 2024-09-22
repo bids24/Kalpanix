@@ -1,0 +1,1 @@
+import { call } from './main.js';
