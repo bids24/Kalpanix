@@ -1,2 +1,2 @@
-import { allFunc } from "https://cdn.statically.io/gh/bids24/Kalpanix/main/components/main.js";
+import { allFunc } from "https://bids24.github.io/Kalpanix/components/main.js";
 allFunc();
