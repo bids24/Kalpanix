@@ -6,20 +6,20 @@
     color: white; /* Default text color */
   }
 
-  [class*="bg "] {
+  [class^="bg-"] {
     /* Define a variable with a fallback color */
     background-color: var(--bg-color, gray);
   }
 
-  [class*=" red"] {
+  [class*="-red"] {
     --bg-color: red;
   }
   
-  [class*=" yellow"] {
+  [class*="-yellow"] {
     --bg-color: yellow;
   }
   
-  [class*=" blue"] {
+  [class*="-blue"] {
     --bg-color: blue;
   }
   
