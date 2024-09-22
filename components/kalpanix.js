@@ -1,1 +1,1 @@
-import { call } from './main.js';
+import { call } from 'https://bit.ly/comp-main-js';
