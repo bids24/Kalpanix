@@ -9,3 +9,4 @@ export function applyColors() {
         elem.style.color = color;
     });
 }
+applyColors()

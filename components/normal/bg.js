@@ -9,3 +9,4 @@ export function applyBackgroundColors() {
         elem.style.backgroundColor = color;
     });
 }
+applyBackgroundColors()
