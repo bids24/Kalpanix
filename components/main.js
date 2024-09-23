@@ -28,9 +28,25 @@ import {
     applyCursor
 } from './normal/normal.js';
 
-export function allFunc(){
+// Function to call all other functions
+export function allFunc() {
     applyColors();
     applyFontSize();
     applyMargin();
-    // Call others as required
-};
+    applyPadding();
+    applyBorder();
+    applyBackgrounds();
+    applyDisplay();
+    applyPosition();
+    applyWidth();
+    applyHeight();
+    applyTextAlign();
+    applyFlex();
+    applyOverflow();
+    applyOpacity();
+    applyZIndex();
+    applyVisibility();
+    applyBoxShadow();
+    applyTransition();
+    applyCursor();
+}

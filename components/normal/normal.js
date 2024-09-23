@@ -15,44 +15,63 @@ export function applyFontSize() {
         const fontClass = Array.from(elem.classList).find(c => c.includes('font-'));
         if (fontClass) {
             const size = fontClass.split('-')[1];
-            elem.style.fontSize = size === 'lg' ? '24px' : size === 'md' ? '16px' : '12px';
+            elem.style.fontSize = size;
         }
     });
 }
-
+applyFontSize();
 // Apply Margin
 export function applyMargin() {
     const elements = document.querySelectorAll('[class*="m-"], [class*="mt-"], [class*="mb-"], [class*="ml-"], [class*="mr-"]');
     elements.forEach(elem => {
-        const marginClasses = Array.from(elem.classList).filter(c => c.includes('m-'));
+        // Find all margin-related classes
+        const marginClasses = Array.from(elem.classList).filter(c => 
+            c.startsWith('m-') || 
+            c.startsWith('mt-') || 
+            c.startsWith('mb-') || 
+            c.startsWith('ml-') || 
+            c.startsWith('mr-')
+        );
+        
         marginClasses.forEach(marginClass => {
+            // Split the class name based on the first hyphen
             const [direction, value] = marginClass.split('-');
-            const size = parseInt(value);
-            switch (direction) {
-                case 'mt':
-                    elem.style.marginTop = `${size * 5}px`;
-                    break;
-                case 'mb':
-                    elem.style.marginBottom = `${size * 5}px`;
-                    break;
-                case 'ml':
-                    elem.style.marginLeft = `${size * 5}px`;
-                    break;
-                case 'mr':
-                    elem.style.marginRight = `${size * 5}px`;
-                    break;
-                default:
-                    elem.style.margin = `${size * 5}px`;
+            const size = parseInt(value, 10); // Parse the margin size (make sure it's an integer)
+
+            if (!isNaN(size)) {
+                switch (direction) {
+                    case 'mt':
+                        elem.style.marginTop = `${size}px`;
+                        break;
+                    case 'mb':
+                        elem.style.marginBottom = `${size}px`;
+                        break;
+                    case 'ml':
+                        elem.style.marginLeft = `${size}px`;
+                        break;
+                    case 'mr':
+                        elem.style.marginRight = `${size}px`;
+                        break;
+                    default:
+                        elem.style.margin = `${size}px`; // For 'm-' case
+                }
             }
         });
     });
 }
 
+applyMargin();
 // Apply Padding
 export function applyPadding() {
     const elements = document.querySelectorAll('[class*="p-"], [class*="pt-"], [class*="pb-"], [class*="pl-"], [class*="pr-"]');
     elements.forEach(elem => {
-        const paddingClasses = Array.from(elem.classList).filter(c => c.includes('p-'));
+        const paddingClasses = Array.from(elem.classList).filter(c =>
+            c.includes('p-')||
+            c.startsWith('pt-') || 
+            c.startsWith('pb-') || 
+            c.startsWith('pl-') || 
+            c.startsWith('pr-')
+        );
         paddingClasses.forEach(paddingClass => {
             const [direction, value] = paddingClass.split('-');
             const size = parseInt(value);
@@ -75,7 +94,7 @@ export function applyPadding() {
         });
     });
 }
-
+applyPadding();
 // Apply Border
 export function applyBorder() {
     const elements = document.querySelectorAll('[class*="border-"]');
