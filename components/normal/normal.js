@@ -7,7 +7,7 @@ export function applyColors() {
         elem.style.color = color;
     });
 }
-
+applyColors();
 // Apply Font Size
 export function applyFontSize() {
     const elements = document.querySelectorAll('[class*="font-"]');
@@ -259,25 +259,3 @@ export function applyCursor() {
     });
 }
 
-// Bulk Export
-export {
-    applyColors,
-    applyFontSize,
-    applyMargin,
-    applyPadding,
-    applyBorder,
-    applyBackgrounds,
-    applyDisplay,
-    applyPosition,
-    applyWidth,
-    applyHeight,
-    applyTextAlign,
-    applyFlex,
-    applyOverflow,
-    applyOpacity,
-    applyZIndex,
-    applyVisibility,
-    applyBoxShadow,
-    applyTransition,
-    applyCursor
-};
