@@ -334,3 +334,17 @@ export function applyAlignItems(){
     });
 }
 applyAlignItems();
+export function applyBorderRadius(){
+    const elements = document.querySelectorAll('[class*="br-"]');
+    elements.forEach(elem => {
+        const borderRadClass = Array.from(elem.classList).find(c => c.includes('br-'));
+        if (borderRadClass) {
+            const parts = borderRadClass5.split('-');
+            
+            const borderRad = parts.slice(1).join('-');
+            console.log(borderRad);
+            elem.style.borderRadius = borderRad || '0px';
+        }
+    });
+}
+applyBorderRadius();
