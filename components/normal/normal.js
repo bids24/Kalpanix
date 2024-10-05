@@ -339,7 +339,7 @@ export function applyBorderRadius(){
     elements.forEach(elem => {
         const borderRadClass = Array.from(elem.classList).find(c => c.includes('br-'));
         if (borderRadClass) {
-            const parts = borderRadClass5.split('-');
+            const parts = borderRadClass.split('-');
             
             const borderRad = parts.slice(1).join('-');
             console.log(borderRad);
