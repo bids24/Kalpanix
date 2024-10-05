@@ -24,72 +24,67 @@ applyFontSize();
 export function applyMargin() {
     const elements = document.querySelectorAll('[class*="m-"], [class*="mt-"], [class*="mb-"], [class*="ml-"], [class*="mr-"]');
     elements.forEach(elem => {
-        // Find all margin-related classes
         const marginClasses = Array.from(elem.classList).filter(c => 
             c.startsWith('m-') || 
             c.startsWith('mt-') || 
-            c.startsWith('mb-') || 
             c.startsWith('ml-') || 
+            c.startsWith('mb-') || 
             c.startsWith('mr-')
-        );
+          );
         
         marginClasses.forEach(marginClass => {
-            // Split the class name based on the first hyphen
             const [direction, value] = marginClass.split('-');
-            const size = parseInt(value, 10); // Parse the margin size (make sure it's an integer)
-
-            if (!isNaN(size)) {
-                switch (direction) {
-                    case 'mt':
-                        elem.style.marginTop = `${size}px`;
-                        break;
-                    case 'mb':
-                        elem.style.marginBottom = `${size}px`;
-                        break;
-                    case 'ml':
-                        elem.style.marginLeft = `${size}px`;
-                        break;
-                    case 'mr':
-                        elem.style.marginRight = `${size}px`;
-                        break;
-                    default:
-                        elem.style.margin = `${size}px`; // For 'm-' case
-                }
+            const size = parseInt(value);
+            switch (direction) {
+                case 'mt':
+                    elem.style.marginTop = `${size}px`;
+                    break;
+                case 'mb':
+                    elem.style.marginBottom = `${size}px`;
+                    break;
+                case 'ml':
+                    elem.style.marginLeft = `${size}px`;
+                    break;
+                case 'mr':
+                    elem.style.marginRight = `${size}px`;
+                    break;
+                default:
+                    elem.style.margin = `${size}px`;
             }
         });
     });
 }
-
 applyMargin();
+
 // Apply Padding
 export function applyPadding() {
     const elements = document.querySelectorAll('[class*="p-"], [class*="pt-"], [class*="pb-"], [class*="pl-"], [class*="pr-"]');
     elements.forEach(elem => {
-        const paddingClasses = Array.from(elem.classList).filter(c =>
-            c.includes('p-')||
+        const paddingClasses = Array.from(elem.classList).filter(c => 
+            c.startsWith('p-') || 
             c.startsWith('pt-') || 
-            c.startsWith('pb-') || 
             c.startsWith('pl-') || 
+            c.startsWith('pb-') || 
             c.startsWith('pr-')
-        );
+          );
         paddingClasses.forEach(paddingClass => {
             const [direction, value] = paddingClass.split('-');
             const size = parseInt(value);
             switch (direction) {
                 case 'pt':
-                    elem.style.paddingTop = `${size * 5}px`;
+                    elem.style.paddingTop = `${size}px`;
                     break;
                 case 'pb':
-                    elem.style.paddingBottom = `${size * 5}px`;
+                    elem.style.paddingBottom = `${size}px`;
                     break;
                 case 'pl':
-                    elem.style.paddingLeft = `${size * 5}px`;
+                    elem.style.paddingLeft = `${size}px`;
                     break;
                 case 'pr':
-                    elem.style.paddingRight = `${size * 5}px`;
+                    elem.style.paddingRight = `${size}px`;
                     break;
                 default:
-                    elem.style.padding = `${size * 5}px`;
+                    elem.style.padding = `${size}px`;
             }
         });
     });
@@ -109,6 +104,7 @@ export function applyBorder() {
         }
     });
 }
+applyBorder();
 
 // Apply Background
 export function applyBackgrounds() {
@@ -121,7 +117,7 @@ export function applyBackgrounds() {
         }
     });
 }
-
+applyBackgrounds();
 // Apply Display
 export function applyDisplay() {
     const elements = document.querySelectorAll('[class*="d-"]');
@@ -133,7 +129,7 @@ export function applyDisplay() {
         }
     });
 }
-
+applyDisplay();
 // Apply Position
 export function applyPosition() {
     const elements = document.querySelectorAll('[class*="pos-"]');
@@ -145,7 +141,7 @@ export function applyPosition() {
         }
     });
 }
-
+applyPosition();
 // Apply Width
 export function applyWidth() {
     const elements = document.querySelectorAll('[class*="w-"]');
@@ -153,11 +149,11 @@ export function applyWidth() {
         const widthClass = Array.from(elem.classList).find(c => c.includes('w-'));
         if (widthClass) {
             const widthValue = widthClass.split('-')[1];
-            elem.style.width = widthValue ? `${widthValue}%` : 'auto';
+            elem.style.width = widthValue ? widthValue : 'auto';
         }
     });
 }
-
+applyWidth();
 // Apply Height
 export function applyHeight() {
     const elements = document.querySelectorAll('[class*="h-"]');
@@ -165,23 +161,23 @@ export function applyHeight() {
         const heightClass = Array.from(elem.classList).find(c => c.includes('h-'));
         if (heightClass) {
             const heightValue = heightClass.split('-')[1];
-            elem.style.height = heightValue ? `${heightValue}px` : 'auto';
+            elem.style.height = heightValue ? heightValue : 'auto';
         }
     });
 }
-
+applyHeight();
 // Apply Text Align
 export function applyTextAlign() {
-    const elements = document.querySelectorAll('[class*="text-"]');
+    const elements = document.querySelectorAll('[class*="ta-"]');
     elements.forEach(elem => {
-        const textAlignClass = Array.from(elem.classList).find(c => c.includes('text-'));
+        const textAlignClass = Array.from(elem.classList).find(c => c.includes('ta-'));
         if (textAlignClass) {
             const alignValue = textAlignClass.split('-')[1] || 'left';
             elem.style.textAlign = alignValue;
         }
     });
 }
-
+applyTextAlign();
 // Apply Flex
 export function applyFlex() {
     const elements = document.querySelectorAll('[class*="flex-"]');
@@ -193,7 +189,7 @@ export function applyFlex() {
         }
     });
 }
-
+applyFlex();
 // Apply Overflow
 export function applyOverflow() {
     const elements = document.querySelectorAll('[class*="overflow-"]');
@@ -205,7 +201,7 @@ export function applyOverflow() {
         }
     });
 }
-
+applyOverflow();
 // Apply Opacity
 export function applyOpacity() {
     const elements = document.querySelectorAll('[class*="opacity-"]');
@@ -217,7 +213,7 @@ export function applyOpacity() {
         }
     });
 }
-
+applyOpacity();
 // Apply Z-Index
 export function applyZIndex() {
     const elements = document.querySelectorAll('[class*="z-"]');
@@ -229,7 +225,7 @@ export function applyZIndex() {
         }
     });
 }
-
+applyZIndex();
 // Apply Visibility
 export function applyVisibility() {
     const elements = document.querySelectorAll('[class*="visibility-"]');
@@ -241,31 +237,36 @@ export function applyVisibility() {
         }
     });
 }
-
+applyVisibility();
 // Apply Box Shadow
 export function applyBoxShadow() {
     const elements = document.querySelectorAll('[class*="shadow-"]');
     elements.forEach(elem => {
         const shadowClass = Array.from(elem.classList).find(c => c.includes('shadow-'));
         if (shadowClass) {
-            const shadowValue = shadowClass.split('-')[1] || 'none';
-            elem.style.boxShadow = shadowValue === 'none' ? 'none' : `0px 4px 8px rgba(0, 0, 0, 0.2)`;
+            const shadowValue = shadowClass.split('-').slice(1,5) || 'none';
+            elem.style.boxShadow = shadowValue === 'none' ? 'none' : `${shadowValue[0]}px ${shadowValue[1]}px ${shadowValue[2]}px ${shadowValue[3]}`;
         }
     });
 }
-
+applyBoxShadow();
 // Apply Transition
 export function applyTransition() {
     const elements = document.querySelectorAll('[class*="transition-"]');
     elements.forEach(elem => {
         const transitionClass = Array.from(elem.classList).find(c => c.includes('transition-'));
         if (transitionClass) {
-            const transitionValue = transitionClass.split('-')[1] || 'all';
-            elem.style.transition = `${transitionValue} 0.3s ease`;
+            const transitionParts = transitionClass.split('-').slice(1, 4);
+            
+            const property = transitionParts[0] || 'all'; 
+            const duration = transitionParts[1] || '0.5'; 
+            const timingFunction = transitionParts[2] || 'ease';
+            
+            elem.style.transition = `${property} ${duration}s ${timingFunction}`;
         }
     });
 }
-
+applyTransition();
 // Apply Cursor
 export function applyCursor() {
     const elements = document.querySelectorAll('[class*="cursor-"]');
@@ -277,4 +278,5 @@ export function applyCursor() {
         }
     });
 }
+applyCursor();
 

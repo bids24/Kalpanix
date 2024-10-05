@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="https://cdn.statically.io/gh/bids24/Kalpanix/main/components/kalpanix.css" rel="stylesheet"> -->
     <title>Document</title>
+    <style>
+        .third:hover{
+            color: blue;
+        }
+    </style>
 </head>
-<body class="bg-lightgreen">
-    <button class="bg-white m-8px pt-8 font-95px p-3">hello</button>
-    <button class="colour-lightgreen font-90px p-4">Don't click</button>
-    <script type = "module" src="https://cdn.jsdelivr.net/gh/bids24/Kalpanix@main/components/kalpanix.js"></script>
+<body class="d-flex">
+    <button class="colour-red m-8px pt-8 font-12px p-3 bg-black flex-1 shadow-0-0-10-red">hello</button>
+    <button class="colour-lightgreen font-90px p-4 border-dotted-2-red ta-center flex-1">Don't click</button>
+    <button class="third font-2rem ta-center m-8px flex-1 transition-color-2-ease cursor-grab">Hello User</button>
+    <script type = "module" src="../components/main.js"></script>
 </body>
 </html>
