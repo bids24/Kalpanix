@@ -190,6 +190,18 @@ export function applyFlex() {
     });
 }
 applyFlex();
+//Apply flex direction
+export function applyFlexDirection(){
+    const elements = document.querySelectorAll('[class*="flex-d-"]');
+    elements.forEach(elem => {
+        const flexDirClass = Array.from(elem.classList).find(c => c.includes('flex-d-'));
+        if(flexDirClass){
+            const dirVal = flexDirClass.split('-')[2] || 'row';
+            elem.style.flexDirection = dirVal;
+        }
+    });
+}
+applyFlexDirection();
 // Apply Overflow
 export function applyOverflow() {
     const elements = document.querySelectorAll('[class*="overflow-"]');
@@ -279,4 +291,46 @@ export function applyCursor() {
     });
 }
 applyCursor();
-
+export function applyAlignContent(){
+    const elements = document.querySelectorAll('[class*="ac-"]');
+    elements.forEach(elem => {
+        const alignContentClass = Array.from(elem.classList).find(c => c.includes('ac-'));
+        // console.log(alignContentClass);
+        if (alignContentClass) {
+            const parts = alignContentClass.split('-');
+            
+            const alignContentVal = parts.slice(1).join('-');
+            console.log(alignContentVal);
+            elem.style.alignContent = alignContentVal || "normal";
+        }
+    });
+}
+applyAlignContent();
+export function applyJustifyContent(){
+    const elements = document.querySelectorAll('[class*="jc-"]');
+    elements.forEach(elem => {
+        const justifyContentClass = Array.from(elem.classList).find(c => c.includes('jc-'));
+        if (justifyContentClass) {
+            const parts = justifyContentClass.split('-');
+            
+            const justifyContentVal = parts.slice(1).join('-');
+            console.log(justifyContentVal);
+            elem.style.justifyContent = justifyContentVal || "flex-start";
+        }
+    });
+}
+applyJustifyContent();
+export function applyAlignItems(){
+    const elements = document.querySelectorAll('[class*="ai-"]');
+    elements.forEach(elem => {
+        const alignItemClass = Array.from(elem.classList).find(c => c.includes('ai-'));
+        if (alignItemClass) {
+            const parts = alignItemClass.split('-');
+            
+            const alignItemVal = parts.slice(1).join('-');
+            console.log(alignItemVal);
+            elem.style.alignItems = alignItemVal || "stretch";
+        }
+    });
+}
+applyAlignItems();

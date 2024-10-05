@@ -25,7 +25,11 @@ import {
     applyVisibility,
     applyBoxShadow,
     applyTransition,
-    applyCursor
+    applyCursor,
+    applyFlexDirection,
+    applyAlignContent,
+    applyJustifyContent,
+    applyAlignItems,
 } from './normal/normal.js';
 
 // Function to call all other functions
@@ -49,4 +53,8 @@ export function allFunc() {
     applyBoxShadow();
     applyTransition();
     applyCursor();
+    applyFlexDirection();
+    applyAlignContent();
+    applyJustifyContent();
+    applyAlignItems();
 }
