@@ -31,7 +31,17 @@ import {
     applyJustifyContent,
     applyAlignItems,
 } from './normal/normal.js';
-
+import {
+    applyButtonStyle1,
+    applyButtonStyle2,
+    applyButtonStyle3,
+    applyButtonStyle4,
+    applyButtonStyle5,
+    applyButtonStyle6,
+    applyButtonStyle7,
+    applyButtonStyle8,
+    applyButtonStyle9,
+} from '../components/elements/buttons.js';
 // Function to call all other functions
 export function allFunc() {
     applyColors();
@@ -57,4 +67,14 @@ export function allFunc() {
     applyAlignContent();
     applyJustifyContent();
     applyAlignItems();
+    applyButtonStyle1();
+    applyButtonStyle2();
+    applyButtonStyle3();
+    applyButtonStyle4();
+    applyButtonStyle5();
+    applyButtonStyle6();
+    applyButtonStyle7();
+    applyButtonStyle8();
+    applyButtonStyle9();
+    
 }
