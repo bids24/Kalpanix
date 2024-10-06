@@ -42,6 +42,19 @@ import {
     applyButtonStyle8,
     applyButtonStyle9,
 } from '../components/elements/buttons.js';
+import { 
+    applyFormStyles1,
+    applyFormStyles2,
+    applyFormStyles3,
+    applyFormStyles4,
+    applyFormStyles5,
+    applyFormStyles6,
+    applyFormStyles7,
+    applyFormStyles8,
+    applyFormStyles9,
+    applyFormStyles10,
+
+ } from './elements/forms.js';
 // Function to call all other functions
 export function allFunc() {
     applyColors();
@@ -76,5 +89,14 @@ export function allFunc() {
     applyButtonStyle7();
     applyButtonStyle8();
     applyButtonStyle9();
-    
+    applyFormStyles1();
+    applyFormStyles2();
+    applyFormStyles3();
+    applyFormStyles4();
+    applyFormStyles5();
+    applyFormStyles6();
+    applyFormStyles7();
+    applyFormStyles8();
+    applyFormStyles9();
+    applyFormStyles10();
 }
