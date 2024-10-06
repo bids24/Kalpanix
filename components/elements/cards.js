@@ -1,3 +1,5 @@
+// import { applyButtonStyle2 } from "./buttons.js";
+
 export function applyCardStyle1() {
     const cards = document.querySelectorAll('.Kalpanix-card1');
     cards.forEach(card => {
@@ -36,7 +38,18 @@ export function applyCardStyle1() {
             text.style.color = '#b3b7ba'; // Light color for readability
             text.style.textAlign = 'center'; // Center text for a neat appearance
         });
-
+        const buttons = card.querySelectorAll('button'); // Ensure 'card-content' class for content text
+        buttons.forEach(button => {
+            button.className = "Kalpanix-btn2";
+            button.style.backgroundImage = 'linear-gradient(to right, #f2709c, #ff9472)';
+            button.style.color = 'white';
+            button.style.padding = '15px 32px';
+            button.style.border = 'none';
+            button.style.borderRadius = '50px';
+            button.style.transition = 'all 0.3s ease';
+            button.addEventListener('mouseover', () => button.style.transform = 'scale(1.1)');
+            button.addEventListener('mouseout', () => button.style.transform = 'scale(1)');
+        });
         // Hover effect: Add subtle movement and a color shift
         card.addEventListener('mouseover', () => {
             card.style.boxShadow = '0 16px 30px rgba(0, 0, 0, 0.25)'; // More pronounced shadow on hover
