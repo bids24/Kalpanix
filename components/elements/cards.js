@@ -14,7 +14,7 @@ export function applyCardStyle1() {
         card.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.2)'; // Stronger shadow for a floating effect
         card.style.transition = 'all 0.4s ease-in-out';
         card.style.overflow = 'hidden'; // Prevent content overflow
-        card.style.cursor = 'none';
+        card.style.cursor = 'pointer';
 
         // Typography styling for title
         const titles = card.querySelectorAll('title'); // Ensure to have 'card-title' class for titles
