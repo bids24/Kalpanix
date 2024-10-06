@@ -42,6 +42,7 @@ import {
     applyButtonStyle7,
     applyButtonStyle8,
     applyButtonStyle9,
+    applyButtonStyle10,
 } from '../components/elements/buttons.js';
 import { 
     applyFormStyles1,
@@ -91,6 +92,7 @@ export function allFunc() {
     applyButtonStyle7();
     applyButtonStyle8();
     applyButtonStyle9();
+    applyButtonStyle10();
     applyFormStyles1();
     applyFormStyles2();
     applyFormStyles3();

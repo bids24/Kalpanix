@@ -27,6 +27,7 @@ export function applyFormStyles1() {
             button.style.backgroundColor = '#3498db';
             button.style.color = '#fff';
             button.style.padding = '10px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '5px';
             button.style.cursor = 'pointer';
@@ -35,10 +36,14 @@ export function applyFormStyles1() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
-                form.style.padding = '10px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
+                form.style.padding = '12px';
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
@@ -75,6 +80,7 @@ export function applyFormStyles2() {
             button.style.backgroundColor = '#2ecc71';
             button.style.color = '#fff';
             button.style.padding = '12px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '8px';
             button.style.width = '100%'; // Full width for small screens
@@ -82,10 +88,14 @@ export function applyFormStyles2() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
                 form.style.padding = '12px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
@@ -122,6 +132,7 @@ export function applyFormStyles3() {
             button.style.backgroundColor = '#9b59b6';
             button.style.color = '#fff';
             button.style.padding = '15px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '10px';
             button.style.width = '100%'; // Full width for small screens
@@ -129,10 +140,14 @@ export function applyFormStyles3() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
-                form.style.padding = '15px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
+                form.style.padding = '12px';
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
@@ -169,6 +184,7 @@ export function applyFormStyles4() {
             button.style.backgroundColor = '#00acc1';
             button.style.color = '#fff';
             button.style.padding = '10px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '8px';
             button.style.width = '100%'; // Full width for small screens
@@ -176,10 +192,14 @@ export function applyFormStyles4() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
-                form.style.padding = '10px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
+                form.style.padding = '12px';
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
@@ -216,6 +236,7 @@ export function applyFormStyles5() {
             button.style.backgroundColor = '#ff7043';
             button.style.color = '#fff';
             button.style.padding = '12px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '8px';
             button.style.width = '100%'; // Full width for small screens
@@ -223,10 +244,14 @@ export function applyFormStyles5() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
                 form.style.padding = '12px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
@@ -263,6 +288,7 @@ export function applyFormStyles6() {
             button.style.backgroundColor = '#fb8c00';
             button.style.color = '#fff';
             button.style.padding = '12px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '10px';
             button.style.width = '100%'; // Full width for small screens
@@ -270,10 +296,14 @@ export function applyFormStyles6() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
                 form.style.padding = '12px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
@@ -310,6 +340,7 @@ export function applyFormStyles7() {
             button.style.backgroundColor = '#ab47bc';
             button.style.color = '#fff';
             button.style.padding = '14px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '10px';
             button.style.width = '100%'; // Full width for small screens
@@ -317,10 +348,14 @@ export function applyFormStyles7() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
-                form.style.padding = '15px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
+                form.style.padding = '12px';
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
@@ -357,6 +392,7 @@ export function applyFormStyles8() {
             button.style.backgroundColor = '#66bb6a';
             button.style.color = '#fff';
             button.style.padding = '12px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '8px';
             button.style.width = '100%'; // Full width for small screens
@@ -364,10 +400,14 @@ export function applyFormStyles8() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
                 form.style.padding = '12px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
@@ -404,6 +444,7 @@ export function applyFormStyles9() {
             button.style.backgroundColor = '#cddc39';
             button.style.color = '#fff';
             button.style.padding = '12px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '10px';
             button.style.width = '100%'; // Full width for small screens
@@ -411,10 +452,14 @@ export function applyFormStyles9() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
                 form.style.padding = '12px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
@@ -433,7 +478,7 @@ export function applyFormStyles10() {
         form.style.padding = '25px';
         form.style.borderRadius = '10px';
         form.style.border = '1px solid #cfd8dc';
-        form.style.maxWidth = '100%'; // Ensure it doesn't overflow screen width
+        form.style.width = '50%';
 
         // Input Styling
         const inputs = form.querySelectorAll('input, textarea, select');
@@ -451,6 +496,7 @@ export function applyFormStyles10() {
             button.style.backgroundColor = '#607d8b';
             button.style.color = '#fff';
             button.style.padding = '12px';
+            button.style.marginTop = '12px';
             button.style.border = 'none';
             button.style.borderRadius = '10px';
             button.style.width = '100%'; // Full width for small screens
@@ -458,10 +504,14 @@ export function applyFormStyles10() {
 
         // Media Query
         const applyMediaQueryStyles = () => {
-            const mediaQuery = window.matchMedia('(max-width: 600px)');
-            if (mediaQuery.matches) {
+            const smallScreen = window.matchMedia('(max-width: 600px)');
+            const bigScreen = window.matchMedia('(min-width: 601px)');
+            if (smallScreen.matches) {
                 form.style.padding = '12px';
-                form.style.maxWidth = '95vw'; // Max width to fit smaller screens
+                form.style.width = '95vw'; // Max width to fit smaller screens
+            }
+            else if(bigScreen.matches){
+                form.style.width = '50vw'; 
             }
         };
 
