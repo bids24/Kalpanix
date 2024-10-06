@@ -2,7 +2,7 @@ export function applyCardStyle1() {
     const cards = document.querySelectorAll('.Kalpanix-card1');
     cards.forEach(card => {
         // Base card styling with vibrant gradient background
-        card.style.background = 'linear-gradient(135deg, #ff7e5f, #feb47b)'; // Vibrant gradient from pink to orange
+        card.style.background = 'linear-gradient(135deg, #0f1112, #3c4042)'; // Vibrant gradient from pink to orange
         card.style.border = 'none'; // Remove border for clean look
         card.style.padding = '20px';
         card.style.borderRadius = '20px'; // Softer, rounded corners for a more modern look
@@ -14,6 +14,7 @@ export function applyCardStyle1() {
         card.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.2)'; // Stronger shadow for a floating effect
         card.style.transition = 'all 0.4s ease-in-out';
         card.style.overflow = 'hidden'; // Prevent content overflow
+        card.style.cursor = 'none';
 
         // Typography styling for title
         const titles = card.querySelectorAll('title'); // Ensure to have 'card-title' class for titles
@@ -28,11 +29,11 @@ export function applyCardStyle1() {
         });
 
         // Add content styles
-        const content = card.querySelectorAll('.card-content'); // Ensure 'card-content' class for content text
+        const content = card.querySelectorAll('p'); // Ensure 'card-content' class for content text
         content.forEach(text => {
             text.style.fontSize = '1rem';
             text.style.lineHeight = '1.6';
-            text.style.color = '#f0f0f0'; // Light color for readability
+            text.style.color = '#b3b7ba'; // Light color for readability
             text.style.textAlign = 'center'; // Center text for a neat appearance
         });
 
@@ -40,13 +41,13 @@ export function applyCardStyle1() {
         card.addEventListener('mouseover', () => {
             card.style.boxShadow = '0 16px 30px rgba(0, 0, 0, 0.25)'; // More pronounced shadow on hover
             card.style.transform = 'translateY(-10px) scale(1.05)'; // Lift and slightly enlarge the card
-            card.style.background = 'linear-gradient(135deg, #00c6ff, #0072ff)'; // Shift to blue gradient on hover
+            card.style.background = 'linear-gradient(45deg, #0f1112, #3c4042)'; // Shift to blue gradient on hover
         });
 
         card.addEventListener('mouseout', () => {
             card.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.2)';
             card.style.transform = 'translateY(0) scale(1)'; // Reset transform on hover exit
-            card.style.background = 'linear-gradient(135deg, #ff7e5f, #feb47b)'; // Reset to initial gradient
+            card.style.background = 'linear-gradient(135deg, #0f1112, #3c4042)'; // Reset to initial gradient
         });
 
         // Media query styles for responsive design
