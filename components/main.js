@@ -30,6 +30,7 @@ import {
     applyAlignContent,
     applyJustifyContent,
     applyAlignItems,
+    applyTextDecoration,
 } from './normal/normal.js';
 
 // Function to call all other functions
@@ -57,4 +58,5 @@ export function allFunc() {
     applyAlignContent();
     applyJustifyContent();
     applyAlignItems();
+    applyTextDecoration();
 }

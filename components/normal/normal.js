@@ -348,3 +348,16 @@ export function applyBorderRadius(){
     });
 }
 applyBorderRadius();
+export function applyTextDecoration(){
+    const elements = document.querySelectorAll('[class*="td-"]');
+    elements.forEach(elem => {
+        const textDecClass = Array.from(elem.classList).find(c => c.includes('td-'));
+        if (textDecClass) {
+            const parts = textDecClass.split('-');
+            
+            const textDecVal = parts.slice(1).join('-');
+            elem.style.textDecoration = textDecVal || 'underline';
+        }
+    });
+}
+applyTextDecoration();
