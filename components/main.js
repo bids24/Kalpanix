@@ -57,6 +57,9 @@ import {
     applyFormStyles10,
 
  } from './elements/forms.js';
+ import{
+    applyCardStyle1,
+ } from '../components/elements/cards.js'
 // Function to call all other functions
 export function allFunc() {
     applyColors();
@@ -103,4 +106,5 @@ export function allFunc() {
     applyFormStyles8();
     applyFormStyles9();
     applyFormStyles10();
+    applyCardStyle1();
 }
