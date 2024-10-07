@@ -8,7 +8,7 @@ export function applyDropdown(){
         dropdownClass.children[0].insertAdjacentElement('afterend', invertedCaret);
         dropdownClass.children[1].style.textAlign = "center";
         dropdownClass.children[1].innerHTML = "&#9650;";
-        dropdownClass.children[2].style.marginTop = "1rem";
+        // dropdownClass.children[2].style.marginTop = "1rem";
         dropdownClass.children[2].style.textAlign = "center";
         dropdownClass.children[2].style.border = "2px solid #000000";
         dropdownClass.children[2].style.borderRadius = "0.5rem";
