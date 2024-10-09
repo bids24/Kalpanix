@@ -1,5 +1,5 @@
 export function applySignupForm1() {
-    const signupForms = document.querySelectorAll('.Kalpanix-signup1');
+    const signupForms = document.querySelectorAll('.kalpanix-signup1');
 
     signupForms.forEach(signupForm => {
         const setStyleIfNotPresent = (element, property, value) => {
@@ -83,11 +83,13 @@ export function applySignupForm1() {
 
                 // Hover effect
                 elem.addEventListener('mouseenter', () => {
-                    elem.style.backgroundColor = '#218838'; // Darker shade on hover
+                    setStyleIfNotPresent(elem, 'backgroundColor', '#218838');
+                    // elem.style.backgroundColor = '#218838'; // Darker shade on hover
                     elem.style.transform = 'scale(1.05)';
                 });
                 elem.addEventListener('mouseleave', () => {
-                    elem.style.backgroundColor = '#28a745'; // Original color
+                    setStyleIfNotPresent(elem, 'backgroundColor', '#28a745');
+                    // elem.style.backgroundColor = '#28a745'; // Original color
                     elem.style.transform = 'scale(1)';
                 });
             } else if (elem.tagName === 'A') {
