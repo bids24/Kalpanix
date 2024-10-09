@@ -17,7 +17,7 @@ export function applyButtonStyle2() {
     const Class = 'kalpanix-btn2';
     const buttons = document.querySelectorAll('.kalpanix-btn2');
     buttons.forEach(button => {
-        button.style.backgroundColor = 'transparent ';
+        button.style.backgroundColor = 'transparent';
         button.style.color = '#3498db';
         button.style.border = '2px solid #3498db';
         button.style.padding = '12px 24px';

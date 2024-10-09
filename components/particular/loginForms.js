@@ -73,9 +73,9 @@ export function applyLoginForm1() {
 
             if (elem.type === 'submit') {
                 setStyleIfNotPresent(elem, 'backgroundColor', '#1931e3');
-                setStyleIfNotPresent(elem, 'color', '#ffffff');
+                // setStyleIfNotPresent(elem, 'color', '#ffffff');
+                elem.style.color = "#ffffff";
                 setStyleIfNotPresent(elem, 'padding', '1rem');
-                // setStyleIfNotPresent(input, 'height', '4rem');
             } else if (elem.tagName === 'A') {
                 setStyleIfNotPresent(elem, 'textDecoration', 'none');
             }
