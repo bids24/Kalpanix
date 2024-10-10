@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* External CSS will take priority over JS-applied styles */
+        .kalpanix-navbar1 li:hover {
+            color: #007bff; /* Hover effect if external CSS is used */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Static HTML structure with only the parent class .kalpanix-navbar1 -->
+    <div class="kalpanix-navbar1">
+        <div>
+            <img src="./assets/logo.avif" alt="Logo"> <!-- Replace with your logo -->
+            <span>Your Website</span>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+        <div>
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <script type="module" src="../components/elements/navabars.js"></script>
+
+</body>
+</html>

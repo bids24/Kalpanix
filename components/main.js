@@ -60,6 +60,7 @@ import { applyCardStyle1 } from "../components/elements/cards.js";
 import { applyDropdown } from "./elements/dropdown.js";
 import { applyLoginForm1 } from "./particular/loginForms.js";
 import { applySignupForm1 } from "./particular/signupform.js";
+import { applyNavbarStyles } from "./elements/navabars.js";
 // Function to call all other functions
 export function allFunc() {
   applyColors();
@@ -110,4 +111,5 @@ export function allFunc() {
   applyDropdown();
   applyLoginForm1();
   applySignupForm1();
+  applyNavbarStyles();
 }
