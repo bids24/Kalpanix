@@ -16,7 +16,6 @@ export function applySignupForm1() {
         setStyleIfNotPresent(signupForm, 'border', '1px solid rgba(255, 255, 255, 0.2)');
         setStyleIfNotPresent(signupForm, 'borderRadius', '15px');
         setStyleIfNotPresent(signupForm, 'boxShadow', '0px 8px 20px rgba(0, 0, 0, 0.2)');
-        // setStyleIfNotPresent(signupForm, 'backgroundColor', 'black');
         setStyleIfNotPresent(signupForm, 'backgroundColor', 'linear-gradient(135deg, #6a11cb, #2575fc)'); // Elegant gradient background
         
         // Apply margin-top for each child element inside the signup form
