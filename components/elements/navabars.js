@@ -8,101 +8,98 @@ export function applyNavbarStyles() {
     const menuItems = navbar.querySelectorAll("ul li");
     const hamburger = navbar.querySelector("div:last-child");
 
+    // Helper function to apply style conditionally
+    const setStyleIfNotPresent = (element, property, value) => {
+        if (!element.style[property]) {
+            element.style[property] = value;
+        }
+    };
+
     // Apply styles to the navbar container
-    Object.assign(navbar.style, {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        backgroundColor: "#333",
-        color: "#fff",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        position: "fixed",
-        top: "0",
-        width: "100vw", // Full viewport width
-        maxWidth: "100%", // Prevent overflow
-        padding: "10px 20px", // Outer padding (top-bottom 10px, left-right 20px)
-        boxSizing: "border-box", // Ensure padding is included in the width calculation
-        zIndex: "1000",
-        transition: "background-color 0.3s ease, box-shadow 0.3s ease",
-        borderBottom: "3px solid #007bff"
-    });
+    setStyleIfNotPresent(navbar, 'display', 'flex');
+    setStyleIfNotPresent(navbar, 'justifyContent', 'space-between');
+    setStyleIfNotPresent(navbar, 'alignItems', 'center');
+    setStyleIfNotPresent(navbar, 'backgroundColor', '#333');
+    setStyleIfNotPresent(navbar, 'color', '#fff');
+    setStyleIfNotPresent(navbar, 'boxShadow', '0 4px 6px rgba(0, 0, 0, 0.1)');
+    setStyleIfNotPresent(navbar, 'position', 'fixed');
+    setStyleIfNotPresent(navbar, 'top', '0');
+    setStyleIfNotPresent(navbar, 'width', '100vw');
+    setStyleIfNotPresent(navbar, 'maxWidth', '100%');
+    setStyleIfNotPresent(navbar, 'padding', '10px 20px');
+    setStyleIfNotPresent(navbar, 'boxSizing', 'border-box');
+    setStyleIfNotPresent(navbar, 'zIndex', '1000');
+    setStyleIfNotPresent(navbar, 'transition', 'background-color 0.3s ease, box-shadow 0.3s ease');
+    setStyleIfNotPresent(navbar, 'borderBottom', '3px solid #007bff');
 
     // Apply smooth transition for scrolling effect (optional)
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = "#222"; // Darker when scrolling
-            navbar.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.2)";
+            navbar.style.backgroundColor = '#222';
+            navbar.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)';
         } else {
-            navbar.style.backgroundColor = "#333";
-            navbar.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+            navbar.style.backgroundColor = '#333';
+            navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
         }
     });
 
-    // Ensure the body has no margin/padding
-    document.body.style.margin = "0";
-    document.body.style.padding = "0";
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
 
-    // Apply flexbox to the logo section for side-by-side alignment
-    Object.assign(logoSection.style, {
-        display: "flex",
-        alignItems: "center" // Align logo and title vertically in the center
-    });
+    // Logo section styles
+    setStyleIfNotPresent(logoSection, 'display', 'flex');
+    setStyleIfNotPresent(logoSection, 'alignItems', 'center');
 
     const logoImage = logoSection.querySelector("img");
-    Object.assign(logoImage.style, {
-        width: "50px",
-        height: "50px",
-        marginRight: "15px",
-        transition: "width 0.3s ease, height 0.3s ease"
-    });
+    setStyleIfNotPresent(logoImage, 'width', '50px');
+    setStyleIfNotPresent(logoImage, 'height', '50px');
+    setStyleIfNotPresent(logoImage, 'marginRight', '15px');
+    setStyleIfNotPresent(logoImage, 'transition', 'width 0.3s ease, height 0.3s ease');
 
     const logoTitle = logoSection.querySelector("span");
-    Object.assign(logoTitle.style, {
-        fontSize: "1.5rem",
-        fontWeight: "bold",
-        color: "#fff",
-        transition: "font-size 0.3s ease"
-    });
+    setStyleIfNotPresent(logoTitle, 'fontSize', '1.5rem');
+    setStyleIfNotPresent(logoTitle, 'fontWeight', 'bold');
+    setStyleIfNotPresent(logoTitle, 'color', '#fff');
+    setStyleIfNotPresent(logoTitle, 'transition', 'font-size 0.3s ease');
 
-    Object.assign(menuSection.style, {
-        listStyle: "none",
-        display: "flex",
-        margin: "0",
-        padding: "0",
-        flexGrow: "1",
-        justifyContent: "flex-end",
-        alignItems: "center",
-        fontSize: "1rem",
-        gap: "30px", // Adds spacing between menu items
-        transition: "font-size 0.3s ease"
-    });
+    // Menu section styles
+    setStyleIfNotPresent(menuSection, 'listStyle', 'none');
+    setStyleIfNotPresent(menuSection, 'display', 'flex');
+    setStyleIfNotPresent(menuSection, 'margin', '0');
+    setStyleIfNotPresent(menuSection, 'padding', '0');
+    setStyleIfNotPresent(menuSection, 'flexGrow', '1');
+    setStyleIfNotPresent(menuSection, 'justifyContent', 'flex-end');
+    setStyleIfNotPresent(menuSection, 'alignItems', 'center');
+    setStyleIfNotPresent(menuSection, 'fontSize', '1rem');
+    setStyleIfNotPresent(menuSection, 'gap', '30px');
+    setStyleIfNotPresent(menuSection, 'transition', 'font-size 0.3s ease');
 
+    // Menu item styles
     menuItems.forEach(item => {
-        Object.assign(item.style, {
-            cursor: "pointer",
-            color: "#fff",
-            transition: "color 0.3s ease, transform 0.3s ease",
-            padding: "15px", // Add padding for clickable area
-            borderRadius: "4px"
+        setStyleIfNotPresent(item, 'cursor', 'pointer');
+        setStyleIfNotPresent(item, 'color', '#fff');
+        setStyleIfNotPresent(item, 'transition', 'color 0.3s ease, transform 0.3s ease');
+        setStyleIfNotPresent(item, 'padding', '15px');
+        setStyleIfNotPresent(item, 'borderRadius', '4px');
+
+        item.addEventListener('mouseover', () => {
+            item.style.color = '#007bff';
+            item.style.transform = 'scale(1.1)';
         });
-        item.addEventListener("mouseover", () => {
-            item.style.color = "#007bff";
-            item.style.transform = "scale(1.1)"; // Slight zoom effect on hover
-        });
-        item.addEventListener("mouseout", () => {
-            item.style.color = "#fff";
-            item.style.transform = "scale(1)"; // Reset zoom effect
+        item.addEventListener('mouseout', () => {
+            item.style.color = '#fff';
+            item.style.transform = 'scale(1)';
         });
     });
 
-    Object.assign(hamburger.style, {
-        fontSize: "2rem",
-        display: "none",
-        cursor: "pointer",
-        color: "#fff",
-        transition: "transform 0.3s ease"
-    });
+    // Hamburger icon styles
+    setStyleIfNotPresent(hamburger, 'fontSize', '2rem');
+    setStyleIfNotPresent(hamburger, 'display', 'none');
+    setStyleIfNotPresent(hamburger, 'cursor', 'pointer');
+    setStyleIfNotPresent(hamburger, 'color', '#fff');
+    setStyleIfNotPresent(hamburger, 'transition', 'transform 0.3s ease');
 
+    // Media query handling
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     const handleMediaQueryChange = (e) => {
         if (e.matches) {
@@ -119,6 +116,7 @@ export function applyNavbarStyles() {
     mediaQuery.addListener(handleMediaQueryChange);
     handleMediaQueryChange(mediaQuery);
 
+    // Hamburger toggle for mobile
     hamburger.addEventListener("click", () => {
         if (menuSection.style.display === "none" || menuSection.style.display === "") {
             menuSection.style.display = "flex";
@@ -129,7 +127,7 @@ export function applyNavbarStyles() {
             menuSection.style.backgroundColor = "#333";
             menuSection.style.width = "100%";
             menuSection.style.textAlign = "center";
-            menuSection.style.padding = "20px 0"; // Added padding for mobile menu
+            menuSection.style.padding = "20px 0";
         } else {
             menuSection.style.display = "none";
         }
