@@ -65,6 +65,7 @@ import { applySignupForm1 } from "./particular/signupform.js";
 import { applyPricingSection1 } from "./particular/pricingSections.js";
 import { applyNavbarStyles } from "./elements/navabars.js";
 import { applyFooterStyles } from "./elements/footer.js";
+import { applyHeroStyles } from "./particular/Sections/Hero.section.js";
 // Function to call all other functions
 export function allFunc() {
   applyColors();
@@ -120,4 +121,5 @@ export function allFunc() {
   applyFooterStyles();
   applyFontWeight();
   applyListStyleType();
+  applyHeroStyles();
 }
