@@ -120,9 +120,9 @@ applyBorder();
 
 // Apply Background
 export function applyBackgroundColor() {
-    const elements = document.querySelectorAll('[class*="bg-color-"]');
+    const elements = document.querySelectorAll('[class*="bgcolor-"]');
     elements.forEach(elem => {
-        const bgClass = Array.from(elem.classList).find(c => c.includes('bg-color-'));
+        const bgClass = Array.from(elem.classList).find(c => c.includes('bgcolor-'));
         if (bgClass) {
             const bgColor = bgClass.split('-')[1] || 'transparent';
             elem.style.backgroundColor = bgColor;
