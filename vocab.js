@@ -4,7 +4,7 @@ export const classToCssProperty = {
     "m-": "margin",
     "p-": "padding",
     "border-": "border",
-    "bg-": "backgroundColor",
+    "bgcolor-": "backgroundColor",
     "d-": "display",
     "pos-": "position",
     "w-": "width",

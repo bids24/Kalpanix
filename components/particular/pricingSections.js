@@ -4,23 +4,19 @@ export function applyPricingSection1() {
   // console.log(pricingClasses);
   const checkAndSetProp = (val, prop, elem) => {
     // console.log(elem,prop,val)
-    const cList = Array.from(elem.classList).filter(c => c !== "kalpanix-pr1");
+    let cList = Array.from(elem.classList).filter((c) => c !== "kalpanix-pr1");
     console.log(cList);
     cList.forEach((c) => {
-        const p = c.split("-")[0] + "-";
-        console.log(p);
-        if (Object.keys(classToCssProperty).includes(p)) {
-          console.log(`${p} exist in dic`);
-          console.log(Object.keys(classToCssProperty).includes(p));
-          console.log(classToCssProperty[p] === prop);
-        } else console.log(`${p} doesn't exist in dic`);
+      const p = c.split("-")[0] + "-";
+      console.log(p);
+
         if (
           !(
             Object.keys(classToCssProperty).includes(p) &&
             classToCssProperty[p] === prop
           )
         ) {
-        //   console.log('apply')
+          //   console.log('apply')
           console.log(classToCssProperty[p]);
           elem.style[prop] = val;
         }
@@ -31,13 +27,13 @@ export function applyPricingSection1() {
   };
   pricingClasses.forEach((pricingClass) => {
     //    pricingClass.classList.forEach(c => console.log(typeof(c)));
-    // pricingClass.style.backgroundColor = 'aqua';
-    // checkAndSetProp("red", "color", pricingClass);
+    checkAndSetProp("yellow", "color", pricingClass);
     pricingClass.style.display = "flex";
     pricingClass.style.flexDirection = "column";
-    pricingClass.style.height = "80vh";
-    pricingClass.style.width = "50vh";
-    checkAndSetProp('1px solid green', 'border', pricingClass);
+    checkAndSetProp("80vh", "height", pricingClass);
+    checkAndSetProp("50vh", "width", pricingClass);
+    checkAndSetProp("1px solid green", "border", pricingClass);
+    checkAndSetProp("green", "backgroundColor", pricingClass);
     // pricingClass.style.color = "#646566";
     pricingClass.style.borderRadius = "1rem";
     pricingClass.style.fontFamily = "sans-serif";
