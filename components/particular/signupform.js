@@ -16,7 +16,7 @@ export function applySignupForm1() {
         setStyleIfNotPresent(signupForm, 'border', '1px solid rgba(255, 255, 255, 0.2)');
         setStyleIfNotPresent(signupForm, 'borderRadius', '15px');
         setStyleIfNotPresent(signupForm, 'boxShadow', '0px 8px 20px rgba(0, 0, 0, 0.2)');
-        setStyleIfNotPresent(signupForm, 'backgroundColor', 'linear-gradient(135deg, #6a11cb, #2575fc)'); // Elegant gradient background
+        setStyleIfNotPresent(signupForm, 'backgroundColor', 'black'); // Element background color
         
         // Apply margin-top for each child element inside the signup form
         Array.from(signupForm.children).forEach(child => {
@@ -32,7 +32,8 @@ export function applySignupForm1() {
             setStyleIfNotPresent(input, 'boxShadow', 'inset 0 2px 5px rgba(255, 255, 255, 0.2)');
             setStyleIfNotPresent(input, 'borderRadius', '10px');
             setStyleIfNotPresent(input, 'transition', 'box-shadow 0.3s ease, transform 0.2s ease');
-
+            // setStyleIfNotPresent(input, 'backgroundColor', 'black');
+            // setStyleIfNotPresent(input, 'color', 'white');
             // Focus and blur event listeners for input styling
             input.addEventListener('focus', () => {
                 input.style.outline = 'none';

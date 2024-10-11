@@ -12,7 +12,6 @@ import {
   applyMargin,
   applyPadding,
   applyBorder,
-  applyBackgrounds,
   applyDisplay,
   applyPosition,
   applyWidth,
@@ -31,6 +30,7 @@ import {
   applyJustifyContent,
   applyAlignItems,
   applyTextDecoration,
+  applyBackgroundColor,
 } from "./normal/normal.js";
 import {
   applyButtonStyle1,
@@ -60,6 +60,7 @@ import { applyCardStyle1 } from "../components/elements/cards.js";
 import { applyDropdown } from "./elements/dropdown.js";
 import { applyLoginForm1 } from "./particular/loginForms.js";
 import { applySignupForm1 } from "./particular/signupform.js";
+import { applyPricingSection1 } from "./particular/pricingSections.js";
 // Function to call all other functions
 export function allFunc() {
   applyColors();
@@ -67,7 +68,7 @@ export function allFunc() {
   applyMargin();
   applyPadding();
   applyBorder();
-  applyBackgrounds();
+  applyBackgroundColor();
   applyDisplay();
   applyPosition();
   applyWidth();
@@ -110,4 +111,5 @@ export function allFunc() {
   applyDropdown();
   applyLoginForm1();
   applySignupForm1();
+  applyPricingSection1();
 }

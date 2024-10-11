@@ -107,17 +107,17 @@ export function applyBorder() {
 applyBorder();
 
 // Apply Background
-export function applyBackgrounds() {
-    const elements = document.querySelectorAll('[class*="bg-"]');
+export function applyBackgroundColor() {
+    const elements = document.querySelectorAll('[class*="bg-color-"]');
     elements.forEach(elem => {
-        const bgClass = Array.from(elem.classList).find(c => c.includes('bg-'));
+        const bgClass = Array.from(elem.classList).find(c => c.includes('bg-color-'));
         if (bgClass) {
             const bgColor = bgClass.split('-')[1] || 'transparent';
             elem.style.backgroundColor = bgColor;
         }
     });
 }
-applyBackgrounds();
+applyBackgroundColor();
 // Apply Display
 export function applyDisplay() {
     const elements = document.querySelectorAll('[class*="d-"]');
