@@ -373,3 +373,15 @@ export function applyTextDecoration(){
     });
 }
 applyTextDecoration();
+export function applyListStyleType(){
+    const elements = document.querySelectorAll('[class*="lst-"]');
+    elements.forEach(elem => {
+        const lstClass = Array.from(elem.classList).find(c => c.includes('lst-'));
+        if (lstClass) {
+            const typ = lstClass.split('-')[1];
+            console.log(typ);
+            elem.style.listStyleType = typ || 'circle';
+        }
+    });
+}
+applyListStyleType();

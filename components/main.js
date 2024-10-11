@@ -32,6 +32,7 @@ import {
   applyTextDecoration,
   applyBackgroundColor,
   applyFontWeight,
+  applyListStyleType,
 } from "./normal/normal.js";
 import {
   applyButtonStyle1,
@@ -118,4 +119,5 @@ export function allFunc() {
   applyNavbarStyles();
   applyFooterStyles();
   applyFontWeight();
+  applyListStyleType();
 }
