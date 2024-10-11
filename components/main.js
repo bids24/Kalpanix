@@ -31,6 +31,7 @@ import {
   applyAlignItems,
   applyTextDecoration,
   applyBackgroundColor,
+  applyFontWeight,
 } from "./normal/normal.js";
 import {
   applyButtonStyle1,
@@ -116,4 +117,5 @@ export function allFunc() {
   applyPricingSection1();
   applyNavbarStyles();
   applyFooterStyles();
+  applyFontWeight();
 }

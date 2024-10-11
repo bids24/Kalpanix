@@ -20,6 +20,18 @@ export function applyFontSize() {
     });
 }
 applyFontSize();
+export function applyFontWeight() {
+    const elements = document.querySelectorAll('[class*="font-w-"]');
+    elements.forEach(elem => {
+        const fontClass = Array.from(elem.classList).find(c => c.includes('font-w-'));
+        if (fontClass) {
+            const weight = fontClass.split('-')[2];
+            // console.log(size);
+            elem.style.fontWeight = weight;
+        }
+    });
+}
+applyFontWeight();
 // Apply Margin
 export function applyMargin() {
     const elements = document.querySelectorAll('[class*="m-"], [class*="mt-"], [class*="mb-"], [class*="ml-"], [class*="mr-"]');
