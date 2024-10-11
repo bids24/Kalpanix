@@ -61,6 +61,8 @@ import { applyDropdown } from "./elements/dropdown.js";
 import { applyLoginForm1 } from "./particular/loginForms.js";
 import { applySignupForm1 } from "./particular/signupform.js";
 import { applyPricingSection1 } from "./particular/pricingSections.js";
+import { applyNavbarStyles } from "./elements/navabars.js";
+import { applyFooterStyles } from "./elements/footer.js";
 // Function to call all other functions
 export function allFunc() {
   applyColors();
@@ -112,4 +114,6 @@ export function allFunc() {
   applyLoginForm1();
   applySignupForm1();
   applyPricingSection1();
+  applyNavbarStyles();
+  applyFooterStyles();
 }
