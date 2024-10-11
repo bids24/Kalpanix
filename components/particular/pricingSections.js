@@ -15,7 +15,7 @@ export function applyPricingSection1() {
     pricingClass.style.flexDirection = "column";
     pricingClass.style.height = "80vh";
     pricingClass.style.width = "50vh";
-    pricingClass.style.border = "1px solid #858482";
+    pricingClass.style.border = "1px solid #e6e7e8";
     pricingClass.style.color = "#646566";
     pricingClass.style.borderRadius = "1rem";
     pricingClass.style.fontFamily = "sans-serif";
@@ -32,7 +32,7 @@ export function applyPricingSection1() {
         child.style.backgroundColor = "#2731f5";
         child.style.alignSelf = "center";
         child.style.borderRadius = "0.3rem";
-        child.style.padding = "0.6rem";
+        // child.style.padding = "0.6rem";
         child.style.textAlign = "center";
         child.style.color = "#ffffff";
       }
