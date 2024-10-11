@@ -1,0 +1,27 @@
+export const classToCssProperty = {
+    'colour-': "color",
+    "font-": "fontSize",
+    "m-": "margin",
+    "p-": "padding",
+    "border-": "border",
+    "bg-": "backgroundColor",
+    "d-": "display",
+    "pos-": "position",
+    "w-": "width",
+    "h-": "height",
+    "ta-": "textAlign",
+    "flex-": "flex",
+    "overflow-": "overflow",
+    "opacity-": "opacity",
+    "z-": "zIndex",
+    "visibility-": "visibility",
+    "shadow-": "boxShadow",
+    "transition-": "transition",
+    "cursor-": "cursor",
+    "ac-": "alignContent",
+    "jc-": "justifyContent",
+    "ai-": "alignItems",
+    "br-": "borderRadius",
+    "td-": "textDecoration"
+  };
+  

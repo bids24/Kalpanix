@@ -109,8 +109,8 @@ export function applyBorder() {
         const borderClass = Array.from(elem.classList).find(c => c.includes('border-'));
         if (borderClass) {
             const properties = borderClass.split('-');
-            const borderType = properties[1] || 'solid';
-            const borderWidth = properties[2] ? `${properties[2]}px` : '1px';
+            const borderWidth = properties[1] ? `${properties[1]}` : '1px';
+            const borderType = properties[2] || 'solid';
             const borderColor = properties[3] || 'black';
             elem.style.border = `${borderWidth} ${borderType} ${borderColor}`;
         }
