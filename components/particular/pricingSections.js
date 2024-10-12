@@ -1,4 +1,3 @@
-import { classToCssProperty } from "../../vocab.js";
 export function applyPricingSection1() {
   const pricingClasses = document.querySelectorAll(".kalpanix-pr1");
   const checkAndSetProp = (val, prop, elem) => {
@@ -24,6 +23,7 @@ export function applyPricingSection1() {
       elem.style[prop] = val;
     }
   };
+
   pricingClasses.forEach((pricingClass) => {
     // Apply color
     checkAndSetProp("yellow", "color", pricingClass);
@@ -76,4 +76,5 @@ export function applyPricingSection1() {
 });
 
 }
+
 applyPricingSection1();
