@@ -1,55 +1,76 @@
+import { classToCssProperty } from "../../vocab.js";
 export function applyLoginForm1() {
-    const loginForms = document.querySelectorAll('.Kalpanix-loginform1');
-
+    const loginForms = document.querySelectorAll('.kalpanix-loginform1');
+    const checkAndSetProp = (val, prop, elem) => {
+        let cList = Array.from(elem.classList);
+        let cl;
+        for(const c in cList){
+          const p = cList[c].split("-")[0] + "-";
+          if(classToCssProperty[p] === prop){
+            cl = cList[c];
+            break;
+          }
+        }
+        for(const c in cList){
+            if(!cl)
+            {
+              elem.style[prop] = val;
+              break;
+            }
+        }
+        if (cList.length === 0) {
+          elem.style[prop] = val;
+        }
+      };
     loginForms.forEach(loginForm => {
         // Helper function to check and set style conditionally
-        const setStyleIfNotPresent = (element, property, value) => {
-            if (!element.style[property]) {
-                element.style[property] = value;
-            }
-        };
-
+        // const setStyleIfNotPresent = (element, property, value) => {
+        //     if (!element.style[property]) {
+        //         element.style[property] = value;
+        //     }
+        // };
+        
         // Set the login form container styles conditionally
-        setStyleIfNotPresent(loginForm, 'display', 'flex');
-        setStyleIfNotPresent(loginForm, 'flexDirection', 'column');
-        setStyleIfNotPresent(loginForm, 'width', '30vw');
-        setStyleIfNotPresent(loginForm, 'padding', '2rem');
-        setStyleIfNotPresent(loginForm, 'border', 'none');
-        setStyleIfNotPresent(loginForm, 'borderRadius', '5px');
-        setStyleIfNotPresent(loginForm, 'boxShadow', '0px 1px 3px rgba(0, 0, 0, 0.7)');
+        checkAndSetProp('flex', 'display', loginForm);
+        checkAndSetProp('column', 'flexDirection', loginForm);
+        checkAndSetProp('40vw', 'width', loginForm);
+        checkAndSetProp('2rem', 'padding', loginForm);
+        checkAndSetProp('none', 'border', loginForm);
+        checkAndSetProp('5px', 'borderRadius', loginForm);
+        checkAndSetProp('0px 1px 3px rgba(0, 0, 0, 0.7)', 'boxShadow', loginForm);
 
         // Apply margin-top for each child element inside the login form
         Array.from(loginForm.children).forEach(child => {
-            setStyleIfNotPresent(child, 'marginTop', '1rem');
+            checkAndSetProp('1rem', 'marginTop', child);
         });
 
         // Set input field styles conditionally
         loginForm.querySelectorAll('input').forEach(input => {
             if(input.type === 'text' || input.type === 'password'){
-                setStyleIfNotPresent(input, 'height', '2rem');
+                checkAndSetProp('2rem', 'height', input)
             }
-            setStyleIfNotPresent(input, 'fontSize', '1.3rem');
-            setStyleIfNotPresent(input, 'boxShadow', '0px 1px 3px rgba(0,0,0,0.7)');
-            setStyleIfNotPresent(input, 'border', 'none');
-            setStyleIfNotPresent(input, 'borderRadius', '5px');
+            checkAndSetProp('1rem', 'fontSize', input);
+            checkAndSetProp('0px 1px 3px rgba(0,0,0,0.7)', 'boxShadow', input);
+            checkAndSetProp('none', 'border', input);
+            checkAndSetProp('5px', 'borderRadius', input);
 
             // Focus and blur event listeners for input styling
             input.addEventListener('focus', () => {
-                input.style.outline = '2px solid rgb(80, 96, 217)';
-                input.style.boxShadow = '0px 1px 10px rgba(80, 96, 217, 0.7)';
+                checkAndSetProp('2px solid rgb(80, 96, 217)', 'outLine', input);
+                checkAndSetProp('0px 1px 10px rgba(80, 96, 217, 0.7)', 'boxShadow', input);
             });
             input.addEventListener('blur', () => {
-                input.style.outline = 'none';
-                input.style.boxShadow = '0px 1px 3px rgba(0, 0, 0, 0.7)';
+                checkAndSetProp('none', 'outLine', input);
+                checkAndSetProp('0px 1px 3px rgba(0, 0, 0, 0.7)', 'boxShadow', input);
             });
         });
 
         // Set label styles conditionally
         loginForm.querySelectorAll('label').forEach(label => {
-            setStyleIfNotPresent(label, 'fontSize', '1.1rem');
-            setStyleIfNotPresent(label, 'fontWeight', 'bold');
-            setStyleIfNotPresent(label, 'color', '#575655');
-            setStyleIfNotPresent(label, 'fontFamily', 'sans-serif');
+            checkAndSetProp('1.1rem', 'fontSize', label);
+            checkAndSetProp('bold', 'fontWeight', label);
+            checkAndSetProp('#575655', 'color', label);
+            checkAndSetProp('sans-serif', 'fontFamily', label)
         });
 
         // Create container for submit button and anchor
@@ -57,27 +78,21 @@ export function applyLoginForm1() {
         document.querySelector('input[type="submit"]').insertAdjacentElement('beforebegin', cont);
 
         // Set the container styles conditionally
-        setStyleIfNotPresent(cont, 'display', 'flex');
-        setStyleIfNotPresent(cont, 'justifyContent', 'space-between');
-        setStyleIfNotPresent(cont, 'alignItems', 'center');
-        setStyleIfNotPresent(cont, 'marginTop', '1rem');
+        checkAndSetProp('flex', 'display', cont);
+        checkAndSetProp('row', 'flexDirection', cont);
+        checkAndSetProp('space-between', 'justifyContent', cont);
+        checkAndSetProp('center', 'alignItems', cont);
+        checkAndSetProp('1rem', 'marginTop', cont);
 
         // Set styles for submit button and anchor link
         loginForm.querySelectorAll('input[type="submit"], a').forEach(elem => {
             cont.appendChild(elem);
-            setStyleIfNotPresent(elem, 'fontSize', '1.1rem');
-            setStyleIfNotPresent(elem, 'fontWeight', 'bold');
-            setStyleIfNotPresent(elem, 'color', '#1931e3');
-            setStyleIfNotPresent(elem, 'fontFamily', 'sans-serif');
-            // setStyleIfNotPresent(elem, 'display', 'inline');
+            checkAndSetProp('1.1rem', 'fontSize', elem);
+            checkAndSetProp('bold', 'fontWeight', elem);
+            checkAndSetProp('sans-serif', 'fontFamily', elem);
 
-            if (elem.type === 'submit') {
-                setStyleIfNotPresent(elem, 'backgroundColor', '#1931e3');
-                // setStyleIfNotPresent(elem, 'color', '#ffffff');
-                elem.style.color = "#ffffff";
-                setStyleIfNotPresent(elem, 'padding', '1rem');
-            } else if (elem.tagName === 'A') {
-                setStyleIfNotPresent(elem, 'textDecoration', 'none');
+            if (elem.tagName === 'A') {
+                checkAndSetProp('none', 'textDecoration', elem);
             }
         });
 
@@ -86,11 +101,11 @@ export function applyLoginForm1() {
             const smallScreen = window.matchMedia('(max-width: 600px)');
             const bigScreen = window.matchMedia('(min-width: 601px)');
             if (smallScreen.matches) {
-                loginForm.style.padding = '12px';
-                loginForm.style.width = '95vw'; // Max width to fit smaller screens
+                checkAndSetProp('12px', 'padding', loginForm);
+                checkAndSetProp('95vw', 'width', loginForm);
             }
             else if(bigScreen.matches){
-                loginForm.style.width = '30vw'; 
+                checkAndSetProp('30vw', 'width', loginForm); 
             }
         };
 

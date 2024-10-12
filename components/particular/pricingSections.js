@@ -1,67 +1,79 @@
 import { classToCssProperty } from "../../vocab.js";
 export function applyPricingSection1() {
   const pricingClasses = document.querySelectorAll(".kalpanix-pr1");
-  // console.log(pricingClasses);
   const checkAndSetProp = (val, prop, elem) => {
-    // console.log(elem,prop,val)
-    let cList = Array.from(elem.classList).filter((c) => c !== "kalpanix-pr1");
+    let cList = Array.from(elem.classList);
     console.log(cList);
-    cList.forEach((c) => {
-      const p = c.split("-")[0] + "-";
-      console.log(p);
-
-        if (
-          !(
-            Object.keys(classToCssProperty).includes(p) &&
-            classToCssProperty[p] === prop
-          )
-        ) {
-          //   console.log('apply')
-          console.log(classToCssProperty[p]);
+    let cl;
+    for(const c in cList){
+      const p = cList[c].split("-")[0] + "-";
+      if(classToCssProperty[p] === prop){
+        cl = cList[c];
+        console.log(cl)
+        break;
+      }
+    }
+    for(const c in cList){
+        if(!cl)
+        {
           elem.style[prop] = val;
+          break;
         }
-    });
+    }
     if (cList.length === 0) {
       elem.style[prop] = val;
     }
   };
   pricingClasses.forEach((pricingClass) => {
-    //    pricingClass.classList.forEach(c => console.log(typeof(c)));
+    // Apply color
     checkAndSetProp("yellow", "color", pricingClass);
-    pricingClass.style.display = "flex";
-    pricingClass.style.flexDirection = "column";
-    checkAndSetProp("80vh", "height", pricingClass);
+
+    // Apply display properties
+    checkAndSetProp("flex", "display", pricingClass);
+    checkAndSetProp("column", "flexDirection", pricingClass);
+
+    // Apply height and width
+    checkAndSetProp("70vh", "height", pricingClass);
     checkAndSetProp("50vh", "width", pricingClass);
+
+    // Apply border and background color
     checkAndSetProp("1px solid green", "border", pricingClass);
     checkAndSetProp("green", "backgroundColor", pricingClass);
-    // pricingClass.style.color = "#646566";
-    pricingClass.style.borderRadius = "1rem";
-    pricingClass.style.fontFamily = "sans-serif";
-    pricingClass.style.padding = "1.5rem";
-    pricingClass.style.fontSize = "0.9rem";
+
+    // Apply border-radius, font-family, padding, and font-size
+    checkAndSetProp("1rem", "borderRadius", pricingClass);
+    checkAndSetProp("sans-serif", "fontFamily", pricingClass);
+    checkAndSetProp("1.5rem", "padding", pricingClass);
+    checkAndSetProp("0.9rem", "fontSize", pricingClass);
+
+    // Handle children elements
     Array.from(pricingClass.children).forEach((child) => {
-      if (child.tagName === "H3") {
-        // child.style.color = "#000000";
-        // child.style.fontSize = '1.5rem';
-        // checkAndSetProp('1.5rem', 'fontSize', child);
-      }
-      if (child.tagName === "A") {
-        child.style.width = "100%";
-        child.style.textDecoration = "none";
-        child.style.backgroundColor = "#2731f5";
-        child.style.alignSelf = "center";
-        child.style.borderRadius = "0.3rem";
-        // child.style.padding = "0.6rem";
-        child.style.textAlign = "center";
-        child.style.color = "#ffffff";
-      }
+        if (child.tagName === "H3") {
+            // Set additional H3 properties if needed
+        }
+        if (child.tagName === "A") {
+            checkAndSetProp("100%", "width", child);
+            checkAndSetProp("none", "textDecoration", child);
+            checkAndSetProp("#2731f5", "backgroundColor", child);
+            checkAndSetProp("center", "alignSelf", child);
+            checkAndSetProp("0.3rem", "borderRadius", child);
+            checkAndSetProp("center", "textAlign", child);
+            checkAndSetProp("#ffffff", "color", child);
+        }
+        if(child.tagName === 'BUTTON'){
+          checkAndSetProp('red', 'color', child)
+          // child.style.color = 'red';
+        }
     });
+
+    // Handle <ul> and <li> elements inside pricingClass
     Array.from(pricingClass.querySelectorAll("ul")).forEach((ul) => {
-      Array.from(ul.children).forEach((li) => {
-        li.style.marginBottom = "1rem";
-        Array.from(li.children)[0].style.color = "green";
-      });
+        Array.from(ul.children).forEach((li) => {
+            checkAndSetProp("1rem", "marginBottom", li);
+            checkAndSetProp("green", "color", Array.from(li.children)[0]);
+        });
     });
-  });
+});
+
 }
 applyPricingSection1();
