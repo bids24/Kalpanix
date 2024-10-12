@@ -1,3 +1,4 @@
+import { classToCssProperty } from "../../vocab.js";
 export function applyPricingSection1() {
   const pricingClasses = document.querySelectorAll(".kalpanix-pr1");
   const checkAndSetProp = (val, prop, elem) => {

@@ -29,8 +29,9 @@ export function applyLoginForm1() {
         //         element.style[property] = value;
         //     }
         // };
-        
+
         // Set the login form container styles conditionally
+        checkAndSetProp('aqua', 'backgroundColor', loginForm)
         checkAndSetProp('flex', 'display', loginForm);
         checkAndSetProp('column', 'flexDirection', loginForm);
         checkAndSetProp('40vw', 'width', loginForm);
