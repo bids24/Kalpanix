@@ -21,11 +21,11 @@ export function applyFontSize() {
 }
 applyFontSize();
 export function applyFontWeight() {
-    const elements = document.querySelectorAll('[class*="font-w-"]');
+    const elements = document.querySelectorAll('[class*="fontw-"]');
     elements.forEach(elem => {
-        const fontClass = Array.from(elem.classList).find(c => c.includes('font-w-'));
+        const fontClass = Array.from(elem.classList).find(c => c.includes('fontw-'));
         if (fontClass) {
-            const weight = fontClass.split('-')[2];
+            const weight = fontClass.split('-')[1];
             // console.log(size);
             elem.style.fontWeight = weight;
         }
@@ -204,11 +204,11 @@ export function applyFlex() {
 applyFlex();
 //Apply flex direction
 export function applyFlexDirection(){
-    const elements = document.querySelectorAll('[class*="flex-d-"]');
+    const elements = document.querySelectorAll('[class*="flexd-"]');
     elements.forEach(elem => {
-        const flexDirClass = Array.from(elem.classList).find(c => c.includes('flex-d-'));
+        const flexDirClass = Array.from(elem.classList).find(c => c.includes('flexd-'));
         if(flexDirClass){
-            const dirVal = flexDirClass.split('-')[2] || 'row';
+            const dirVal = flexDirClass.split('-')[1] || 'row';
             elem.style.flexDirection = dirVal;
         }
     });
@@ -385,3 +385,16 @@ export function applyListStyleType(){
     });
 }
 applyListStyleType();
+
+export function applyLetterSpacing(){
+    const elements = document.querySelectorAll('[class*="ls-"]');
+    elements.forEach(elem => {
+        const lsClass = Array.from(elem.classList).find(c => c.includes('ls-'));
+        if (lsClass) {
+            const spacing = lsClass.split('-')[1];
+            console.log(spacing);
+            elem.style.letterSpacing = spacing || 'normal';
+        }
+    });
+}
+applyLetterSpacing();

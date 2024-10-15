@@ -1,6 +1,7 @@
 export const classToCssProperty = {
-    'colour-': "color",
+    "colour-": "color",
     "font-": "fontSize",
+    "fontw-": "fontWeight",
     "m-": "margin",
     "p-": "padding",
     "border-": "border",
@@ -11,6 +12,7 @@ export const classToCssProperty = {
     "h-": "height",
     "ta-": "textAlign",
     "flex-": "flex",
+    "flexd-": "flexDirection",
     "overflow-": "overflow",
     "opacity-": "opacity",
     "z-": "zIndex",
@@ -22,6 +24,8 @@ export const classToCssProperty = {
     "jc-": "justifyContent",
     "ai-": "alignItems",
     "br-": "borderRadius",
-    "td-": "textDecoration"
+    "td-": "textDecoration",
+    "lst-": "listStyleType",
+    "ls-": "letterSpacing",
   };
   
