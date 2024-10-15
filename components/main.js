@@ -66,6 +66,8 @@ import { applyPricingSection1 } from "./particular/pricingSections.js";
 import { applyNavbarStyles } from "./elements/navabars.js";
 import { applyFooterStyles } from "./elements/footer.js";
 import { applyHeroStyles } from "./particular/Sections/Hero.section.js";
+import { applyFloatingDock } from "./elements/floatingdock.js";
+import { applyThemeToggler } from "./elements/themetoggler.js";
 // Function to call all other functions
 export function allFunc() {
   applyColors();
@@ -122,4 +124,6 @@ export function allFunc() {
   applyFontWeight();
   applyListStyleType();
   applyHeroStyles();
+  applyFloatingDock();
+  applyThemeToggler();
 }
